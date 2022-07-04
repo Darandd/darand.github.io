@@ -51,7 +51,7 @@
         <img src="img/profile2.jpeg" alt="Darmadi Andrew Fernando" width="200" class="rounded-circle img-jumbo">
         <p class="p-jumbo-top">I'm</p>
         <h1 class="display-3">Darmadi Andrew Fernando</h1>
-        <p class="p-jumbo-btm">Student | Full Stack Developer</p>
+        <p class="p-jumbo-btm mb-5">Student | Web Developer</p>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#272833" fill-opacity="1"
                 d="M0,160L48,160C96,160,192,160,288,176C384,192,480,224,576,229.3C672,235,768,213,864,197.3C960,181,1056,171,1152,176C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
@@ -74,7 +74,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolor praesentium sint,
                         laudantium nam consectetur error iure sed fuga atque.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-5">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellat nesciunt, mollitia
                         velsequi maxime. Mollitia blanditiis asperiores et ab quam esse porro consequatur culpa.</p>
                 </div>
@@ -141,7 +141,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-5">
                     <div class="card">
                         <img src="img/laptop1.jpg" class="card-img-top" alt="Laptop">
                         <div class="card-body">
@@ -172,23 +172,32 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-6">
+                    <div class="alert alert-success alert-dismissible fade show d-none msg-alert" role="alert">
+                        <strong>Pesan Anda sudah terkirim!</strong> Mohon menunggu balasannya.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
                     <form name="darand-contact-form">
                         <div class="mb-3">
                             <label for="name" class="form-label">Nama Lengkap</label>
                             <input type="text" class="form-control" id="name" aria-describedby="name"
-                                placeholder="Input Nama Lengkap" name="nama">
+                                placeholder="Input Nama Lengkap" name="nama" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" aria-describedby="email"
-                                placeholder="Input email" name="email">
+                                placeholder="Input email" name="email" required>
                         </div>
                         <div class="mb-3">
                             <label for="pesan">Pesan</label>
-                            <textarea class="form-control" id="pesan" rows="4" name="pesan"></textarea>
+                            <textarea class="form-control" id="pesan" rows="4" name="pesan" required
+                                placeholder="Ketikkan pesan Anda"></textarea>
                         </div>
+                        <button type="submit" class="btn btn-success btn-kirim">Kirim</button>
 
-                        <button type="submit" class="btn btn-success">Kirim</button>
+                        <button class="btn btn-success btn-loading d-none" type="button" disabled>
+                            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                            Loading...
+                        </button>
                     </form>
                 </div>
             </div>
@@ -216,14 +225,30 @@
         const scriptURL =
             'https://script.google.com/macros/s/AKfycbx_FsOI6n13c1Xbwem97lv_ldAf89fkgbg9a5A9RVmnKF0GhHQARWNG09-5OBt5vSz1/exec'
         const form = document.forms['darand-contact-form']
+        const btnKirim = document.querySelector('.btn-kirim');
+        const btnLoading = document.querySelector('.btn-loading');
+        const msgAlert = document.querySelector('.msg-alert');
 
         form.addEventListener('submit', e => {
-            e.preventDefault()
+            e.preventDefault();
+            // ketika tombol kirim diklik
+            // tampilkan tombol loading, hilangkan tombol kirim
+            btnLoading.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
             fetch(scriptURL, {
                     method: 'POST',
                     body: new FormData(form)
                 })
-                .then(response => console.log('Success!', response))
+                .then(response => {
+                    // tampilkan tombol kirim, hilangkan tombol loading
+                    btnLoading.classList.toggle('d-none');
+                    btnKirim.classList.toggle('d-none');
+                    // tampilkan alert
+                    msgAlert.classList.toggle('d-none');
+                    // reset form (kosongkan isi form)
+                    form.reset();
+                    console.log('Success!', response)
+                })
                 .catch(error => console.error('Error!', error.message))
         })
     </script>
