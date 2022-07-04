@@ -1,0 +1,54 @@
+.nav-head {
+  padding-top: 1rem;
+  background-color: #353543;
+}
+
+.navfont {
+  color: #848496;
+  font-size: large;
+}
+
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #353543;
+  color: #ffffff;
+}
+
+.p-jumbo-top {
+  margin-top: 30px;
+  font-size: 24px;
+}
+
+.p-jumbo-btm {
+  font-size: 20px;
+  margin-top: 25px;
+}
+
+.img-jumbo {
+  border: 6px solid #ffffff;
+}
+
+#About,
+#Contact {
+  background-color: #272833;
+  color: white;
+}
+
+#Projects,
+#Footer {
+  background-color: #353543;
+  color: #000000;
+}
+
+.a-foot {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.a-foot:hover {
+  color: #00fff7;
+}
+
+section {
+  padding-top: 6rem;
+}
