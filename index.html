@@ -11,17 +11,25 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- CSS AoS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+    <!-- Scroll to Top Button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"
+            aria-hidden="true"></i></button>
+    <!-- Akhir Scroll to Top Button -->
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark nav-head fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark nav-head fixed-top" id="navbar-id">
         <div class="container">
-            <a class="navbar-brand" href="#"><img
-                    src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="logo"
-                    width="10%" height="10%"> Darmadi Andrew
-                Fernando</a>
+            <a class="navbar-brand a-navbrand" href="#">Darand</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -51,7 +59,7 @@
         <img src="img/profile2.jpeg" alt="Darmadi Andrew Fernando" width="200" class="rounded-circle img-jumbo">
         <p class="p-jumbo-top">I'm</p>
         <h1 class="display-3">Darmadi Andrew Fernando</h1>
-        <p class="p-jumbo-btm mb-5">Student | Web Developer</p>
+        <p class="p-jumbo-btm mb-5"></p>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#272833" fill-opacity="1"
                 d="M0,160L48,160C96,160,192,160,288,176C384,192,480,224,576,229.3C672,235,768,213,864,197.3C960,181,1056,171,1152,176C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
@@ -64,20 +72,23 @@
     <!-- About -->
     <section id="About">
         <div class="container">
-            <div class="row text-center mb-4">
+            <div class="row text-center mb-4" data-aos="fade-down" data-aos-duration="1000" data-aos-offset="300">
                 <div class="col">
                     <h2>About Me</h2>
                 </div>
             </div>
             <div class="row justify-content-center fs-5 text-center">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="305"
+                    data-aos-delay="250">
                     <p>Selamat datang di website portofolio saya. Nama saya Darmadi Andrew Fernando. Alamat saya di
                         Jungkat No. 26. Saat ini saya sedang berfokus sebagai Front-End Developer, tetapi
                         berkeinginan agar dapat menjadi Full Stack Developer.</p>
                 </div>
-                <div class="col-md-4 mb-5">
-                    <p>Saya mahasiswa aktif di salah satu universitas Pontianak, yaitu Universitas Widya Dharma
-                        Pontianak. Jurusan yang saya ambil adalah Sistem Informasi.</p>
+                <div class="col-md-4 mb-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500"
+                    data-aos-offset="305">
+                    <p>Saya merupakan mahasiswa aktif di salah satu universitas Pontianak, yaitu Universitas Widya
+                        Dharma
+                        Pontianak. Program studi yang saya ambil adalah Sistem Informasi.</p>
                 </div>
             </div>
         </div>
@@ -92,66 +103,48 @@
     <!-- Projects -->
     <section id="Projects">
         <div class="container">
-            <div class="row text-center mb-4">
+            <div class="row text-center mb-4" data-aos="fade-down" data-aos-offset="330" data-aos-duration="1000">
                 <div class="col">
                     <h2 class="text-white">My Projects</h2>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 card-proj">
                     <div class="card">
-                        <img src="img/dice1.jpg" class="card-img-top" alt="Dice">
+                        <a href="https://darmadiandrewfernando.000webhostapp.com/index.php"><img
+                                src="img/olshop-webhost.jpg" class="card-img-top" alt="Dice"></a>
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make
-                                up
-                                the bulk
-                                of the card's content.</p>
+                            <p class="card-text">Online Shop Sederhana</p>
+                            <a href="https://darmadiandrewfernando.000webhostapp.com/index.php" class="a-visit">Visit
+                                Website</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 card-proj">
                     <div class="card">
-                        <img src="img/keyboard1.jpg" class="card-img-top" alt="Keyboard">
+                        <a href="https://darmadiandrewfernando.000webhostapp.com/UAS.php"><img
+                                src="img/buku-webhost.jpg" class="card-img-top" alt="Keyboard"></a>
                         <div class="card-body">
-                            <p class="card-text p-projects">Some quick example text to build on the card title and make
-                                up
-                                the bulk
-                                of the card's content.</p>
+                            <p class="card-text p-projects">Database Buku</p>
+                            <a href="https://darmadiandrewfernando.000webhostapp.com/UAS.php" class="a-visit">Visit
+                                Website</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4 card-proj">
                     <div class="card">
-                        <img src="img/mouse1.jpg" class="card-img-top" alt="Mouse">
+                        <a href="http://keluargakudus.rf.gd/"><img src="img/gereja-infinity.jpg" class="card-img-top"
+                                alt="Mouse"></a>
                         <div class="card-body">
-                            <p class="card-text p-projects">Some quick example text to build on the card title and make
-                                up
-                                the bulk
-                                of the card's content.</p>
+                            <p class="card-text p-projects">Gereja</p>
+                            <a href="http://keluargakudus.rf.gd/" class="a-visit">Visit Website</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="img/monitor1.jpg" class="card-img-top" alt="Monitor">
-                        <div class="card-body">
-                            <p class="card-text p-projects">Some quick example text to build on the card title and make
-                                up
-                                the bulk
-                                of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="card">
-                        <img src="img/laptop1.jpg" class="card-img-top" alt="Laptop">
-                        <div class="card-body">
-                            <p class="card-text p-projects">Some quick example text to build on the card title and make
-                                up
-                                the bulk
-                                of the card's content.</p>
-                        </div>
-                    </div>
+            </div>
+            <div class="row justify-content-center text-center">
+                <div class="d-grid col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <a href="#" class="a-see-more">See more projects...</a>
                 </div>
             </div>
         </div>
@@ -166,7 +159,7 @@
     <!-- Contact -->
     <section id="Contact">
         <div class="container">
-            <div class="row text-center mb-3">
+            <div class="row text-center mb-3" data-aos="fade-down" data-aos-offset="330" data-aos-duration="1000">
                 <div class="col">
                     <h2>Contact Me</h2>
                 </div>
@@ -178,22 +171,26 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                     <form name="darand-contact-form">
-                        <div class="mb-3">
+                        <div class="mb-3" data-aos="fade-up" data-aos-offset="250" data-aos-duration="1000"
+                            data-aos-delay="100">
                             <label for="name" class="form-label">Nama Lengkap</label>
                             <input type="text" class="form-control" id="name" aria-describedby="name"
                                 placeholder="Input Nama Lengkap" name="nama" required>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3" data-aos="fade-up" data-aos-offset="250" data-aos-duration="1000"
+                            data-aos-delay="200">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" aria-describedby="email"
                                 placeholder="Input email" name="email" required>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3" data-aos="fade-up" data-aos-offset="250" data-aos-duration="1000"
+                            data-aos-delay="300">
                             <label for="pesan">Pesan</label>
                             <textarea class="form-control" id="pesan" rows="4" name="pesan" required
                                 placeholder="Ketikkan pesan Anda"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-success btn-kirim">Kirim</button>
+                        <button type="submit" class="btn btn-info btn-kirim" data-aos="fade-up" data-aos-duration="1000"
+                            data-aos-delay="400">Kirim</button>
 
                         <button class="btn btn-success btn-loading d-none" type="button" disabled>
                             <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
@@ -215,6 +212,15 @@
     <footer class="text-center p-5" id="Footer">
         <p>Built by <a href="https://www.instagram.com/darand30/" class="a-foot fw-bold">Darmadi Andrew Fernando</a>
         </p>
+        <ul>
+            <li><a href="https://www.instagram.com/darand30/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="https://wa.me/62895600381264"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+            <li><a href="https://twitter.com/Darand65771094"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/darmadi-andrew-fernando-b45b1823b/"><i class="fa fa-linkedin"
+                        aria-hidden="true"></i></a></li>
+        </ul>
     </footer>
     <!-- Akhir Footer -->
 
@@ -222,6 +228,63 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
 
+    <!-- Script AoS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        const cardProject = document.querySelectorAll('.card-proj');
+
+        cardProject.forEach((card, i) => {
+            card.dataset.aos = 'zoom-in';
+            card.dataset.aosDelay = i * 200;
+            card.dataset.aosOffset = 300;
+            card.dataset.aosDuration = 1000;
+        });
+
+        AOS.init({
+            once: true,
+        });
+    </script>
+
+    <!-- script GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
+    <script>
+        gsap.registerPlugin(TextPlugin);
+        gsap.to('.p-jumbo-btm', {
+            duration: 2,
+            delay: 2,
+            text: 'Student | Web Developer'
+        })
+        gsap.from('.navbar', {
+            duration: 1.5,
+            y: '-100%',
+            opacity: 0,
+            ease: 'bounce'
+        });
+        gsap.from('.jumbotron img', {
+            duration: 1,
+            rotateY: 360,
+            opacity: 0,
+            delay: 0.5
+        });
+        gsap.from('.p-jumbo-top', {
+            duration: 1,
+            x: -100,
+            opacity: 0,
+            delay: 1,
+            ease: 'back'
+        });
+        gsap.from('.display-3', {
+            duration: 1,
+            x: -100,
+            opacity: 0,
+            delay: 1.5,
+            ease: 'back'
+        });
+    </script>
+
+    <!-- Script form to google sheets -->
     <script>
         const scriptURL =
             'https://script.google.com/macros/s/AKfycbx_FsOI6n13c1Xbwem97lv_ldAf89fkgbg9a5A9RVmnKF0GhHQARWNG09-5OBt5vSz1/exec'
@@ -253,6 +316,32 @@
                 .catch(error => console.error('Error!', error.message))
         })
     </script>
+
+    <!-- Script Scroll to Top Button -->
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
 </body>
 
 </html>

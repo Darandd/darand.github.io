@@ -8,6 +8,17 @@
   font-size: large;
 }
 
+#navbar-id img {
+  background-color: #ffffff;
+  border-radius: 100%;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.a-navbrand {
+  font-size: 30px;
+}
+
 .jumbotron {
   padding-top: 8rem;
   background-color: #353543;
@@ -29,15 +40,51 @@
 }
 
 #About,
-#Contact {
+#Contact,
+#Gallery {
   background-color: #272833;
-  color: white;
+  color: #ffffff;
 }
 
 #Projects {
   background-color: #353543;
   color: #000000;
 }
+
+#Projects .card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px 0 rgba(1, 203, 254, 0.4);
+  z-index: 3;
+}
+
+.a-visit {
+  text-decoration: none;
+  background-color: none;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+  padding: 7px 22px 7px 22px;
+  border-radius: 50px;
+}
+
+.a-visit:hover {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.a-see-more {
+  text-decoration: none;
+  background-color: none;
+  color: #4ecdf1;
+  border: 1px solid #4ecdf1;
+  padding: 7px 22px 7px 22px;
+  border-radius: 50px;
+}
+
+.a-see-more:hover {
+  background-color: #4ecdf1;
+  color: #000000;
+}
+
 #Footer {
   background-color: #353543;
   color: #ffffff;
@@ -54,4 +101,56 @@
 
 section {
   padding-top: 8rem;
+}
+
+.gallery-img {
+  width: 100%;
+}
+
+#Gallery .row > * {
+  padding: 0;
+}
+
+#Footer ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin: auto;
+}
+
+#Footer li {
+  display: inline;
+}
+
+#Footer .fa {
+  color: #00fff7;
+  margin: 10px;
+}
+
+#Footer .fa:hover {
+  color: #fbff04;
+}
+
+#Footer i {
+  font-size: 24px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50px;
+  color: #00fff7;
+  font-size: 50px;
+}
+
+#myBtn:hover {
+  color: #fbff04;
 }
